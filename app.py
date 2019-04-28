@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, session
 import data_manager
 import util
-
-from flask import Flask
+import os
+import psycopg2
+import urllib
 
 
 app = Flask(__name__)
@@ -52,6 +53,3 @@ def registration():
         else:
             return '<h1>This username is already exists</h1>'
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
